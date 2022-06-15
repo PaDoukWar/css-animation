@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover Effect</title>
+
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+
+		a{
+			color: #000;
+			border: 5px solid #000;
+			font-size: 40px;
+			padding: 40px 80px;
+			text-decoration: none;
+
+			position: relative;
+
+			/*overflow: hidden;*/
+
+			display: block;
+		}
+
+		a::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: steelblue;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+
+			transform: rotate(90deg);
+			/*default*/
+			/*transform-origin: center;*/
+
+			/*transform-origin: top;*/
+			/*transform-origin: right;*/
+			/*transform-origin: left;*/
+			/*transform-origin: bottom;*/
+
+			/*transform-origin: top left;*/
+			/*transform-origin: top right;*/
+			/*transform-origin: bottom left;*/
+			transform-origin: bottom right;
+			transition: 1s;
+
+		}
+
+		a:hover::before{
+			transform: rotate(0deg);
+		}
+
+		button{
+			background:transparent;
+
+			color: #000;
+			border: 5px solid #000;
+			font-size: 40px;
+			padding: 40px 80px;
+			text-decoration: none;
+			position: relative;
+			overflow:hidden;
+
+		}
+
+		button::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: steelblue;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			z-index: -1;
+
+			/*transform: translate(100%);
+			transform: translate(-100%);
+			transform: translateX(100%);
+			transform: translateX(-100%);*/
+
+			/*transform: translateY(100%);*/
+			/*transform: translateY(-100%);*/
+
+			/*transform: translate(100%,100%);*/
+			/*transform: translate(-100%,100%);*/
+			/*transform: translate(100%,-100%);*/
+			/*transform: translate(-100%,-100%);*/
+
+			/*transform: translateX(100%) translateY(100%);
+			transform: translateX(-100%) translateY(100%);
+			transform: translateX(100%) translateY(-100%);*/
+			transform: translateX(-100%) translateY(-100%);
+
+			transition: transform 1s;
+		}
+
+		button:hover::before{
+			/*transform: translate(0%);*/
+			/*transform: translateX(0%);*/
+			/*transform: translateY(0%);*/
+
+			/*transform: translate(0%);*/
+			/*transform: translate(0%,0%);*/
+			transform: translateX(0%) translateY(0%);
+		}
+
+	</style>
+<!-- </head> -->
+<body>
+
+	<div>
+		<a href="#">Hover Me</a>
+
+		<button type="button">Hover Me</button>
+	</div>	
+
+</body>
+</html>

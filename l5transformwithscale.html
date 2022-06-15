@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform with scale</title>
+	<style type="text/css">
+		.container{
+			width: 1000px;
+			background: grey;
+		}
+
+		.container .move{
+			width: 150px;
+			height: 60px;
+			background: red;
+			color: #fff;
+			font-size: 20px;
+
+			margin: 20px 0;
+
+			text-align: center;
+			line-height: 60px;
+
+		}
+
+		#scale:hover{
+			/*transform: scale(0);*/
+			/*transform: scale(1.0);*/
+			/*transform: scale(2);*/
+			transform: scale(0.5);
+		}
+
+		#scalexy:hover{
+			/*scale(x,y)*/
+			/*transform: scale(1,2);*/
+			/*transform: scale(2,1);
+			transform: scale(2,3);*/
+		}
+
+	#scalex:hover{
+		/*scaleX(x)*/
+		transform: scaleX(3.0);
+	}
+
+	#scaley:hover{
+		/*scaleY(y)*/
+		transform: scaleY(2.0);
+	}
+
+
+	img{
+		width: 300px;
+
+		display: block;
+		margin: auto;
+	}
+
+	img:hover{
+		/*transform: scale(30%);*/
+		/*transform: scale(2);*/
+
+		/*transform: scaleX(2.5);*/
+
+		/*transform: scaleY(3.0);*/
+	}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div class="move" id="scale">
+			Scale Me
+		</div>
+	</div>
+
+	<div class="container">
+		
+		<div class="move" id="scalexy">
+			Scale X,Y
+		</div>
+	</div>
+
+	<div class="container">
+		
+		<div class="move" id="scalex">
+			Scale X
+		</div>
+	</div>
+
+	<div class="container">
+		
+		<div class="move" id="scaley">
+			Scale Y
+		</div>
+	</div>
+
+	<hr/>
+
+	<div>
+		<div><img src="./image/dog.jpg"></div>
+	</div>
+
+
+
+</body>
+</html>
+
+<!-- scale()
+scalexy(xy)
+scaleX(x)
+scaleY(y) -->
